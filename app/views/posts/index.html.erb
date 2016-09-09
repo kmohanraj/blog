@@ -1,0 +1,15 @@
+<h1> This is our default page</h1>
+
+ <% @posts.each do |i| %>
+      
+        <%= i.title %>
+        <%= i.date %>
+        <%= i.desc %>
+        <%= i.category_id %>
+       <%= link_to "This is show link", {:action=>"show", :controller=>"posts" , :id => i.id} %>
+        <%= link_to "This is edit link", {:action=>"edit", :controller=>"posts" , :id => i.id} %>
+       
+        
+        </br></br>
+      
+    <% end %>
